@@ -23,6 +23,12 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       saveFavoriteBeer: function(){
         this.favoriteBeers.push(this.selectedBeer)
+      },
+      removeBeer: function(index){
+        this.favoriteBeers.splice(index, 1)
+      },
+      displayIngredients: function(){
+        this.beers.ingredients.map(ingredient => ingredient.name)
       }
     }
   })

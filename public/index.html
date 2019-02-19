@@ -19,20 +19,15 @@
 			<h2>{{selectedBeer.name}}</h2>
 			<h3>{{selectedBeer.tagline}}</h3>
 			<h3>{{selectedBeer.description}}</h3>
+			<p>{{selectedBeer.displayIngredients}}</p>
 			<img class="image" :src="selectedBeer.image_url" :alt="selectedBeer.name">
 		</div>
     <button v-on:click="saveFavoriteBeer">Save Beer</button>
-		<div v-for="faveBeer in favoriteBeers">
+		<div v-for="(faveBeer, index) in favoriteBeers">
 			<h2>{{faveBeer.name}}</h2>
 			<h3>{{faveBeer.description}}</h3>
+			<button v-on:click="removeBeer(index)">Remove Beer</button>
  		</div>
 	</div>
 </body>
 </html>
-
-
-<button v-on:click="saveFavoriteCountry">Save Country</button>
-			<div v-for="faveCountry in favoriteCountries">
-			<h2>{{faveCountry.name}}</h2>
-			<h3>{{faveCountry.population}}</h3>
-		</div>
