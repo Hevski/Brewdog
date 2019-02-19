@@ -28,7 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
         this.favoriteBeers.splice(index, 1)
       },
       displayIngredients: function(){
-        this.beers.ingredients.map(ingredient => ingredient.name)
+        this.beers.keys(ingredient).map(function(key, index) {
+        ingredient[key]
+      });
+        // this.beers.ingredients.map(ingredient => ingredient.name)
       }
     }
   })
