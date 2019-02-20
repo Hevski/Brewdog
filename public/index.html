@@ -19,10 +19,13 @@
 			<h2>{{selectedBeer.name}}</h2>
 			<h3>{{selectedBeer.tagline}}</h3>
 			<h3>{{selectedBeer.description}}</h3>
+			<h3>Malt</h3>
 			<div v-for="malt in selectedBeer.ingredients.malt">
-			<p>{{malt.name}}</p>
-			<p>{{malt.amount.value}}</p>
-			<p>{{malt.amount.unit}}</p>
+			<p>{{malt.name}} {{malt.amount.value}} {{malt.amount.unit}}</p>
+			</div>
+			<h3>Hops</h3>
+			<div v-for="hops in selectedBeer.ingredients.hops">
+				<p>{{hops.name}} {{hops.amount.value}}</p>
 			</div>
 			<img class="image" :src="selectedBeer.image_url" :alt="selectedBeer.name">
 		</div>
