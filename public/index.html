@@ -29,7 +29,7 @@
 			</div>
 			<img class="image" :src="selectedBeer.image_url" :alt="selectedBeer.name">
 		</div>
-    <button v-on:click="saveFavoriteBeer">Save Beer</button>
+    <button v-if="!favoriteBeers.includes(selectedBeer)"v-on:click="saveFavoriteBeer">Save Beer</button>
 		<div v-for="(faveBeer, index) in favoriteBeers">
 			<h2>{{faveBeer.name}}</h2>
 			<h3>{{faveBeer.description}}</h3>
